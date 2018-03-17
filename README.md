@@ -34,9 +34,30 @@ $m->save("/tmp/model.dat");
 ## Documentation
 
 ### `Markov::Markov([$order = 3 [, $delimiter = " "]])`
+Constructor.  Creates a new Markov object.
 - `$order`		Markov model order (how many things we keep track of)
 - `$delimiter`	May be either "something" or "".  If empty, split on character.
 
 ### `Markov::add($text)`
-- `$text`		String of text to add to the current model
+Add some text to the current markov model.
+- `$text`		String of text to add
+
+### `Markov::add_file($filename)`
+Add some text from a file to the current model
+- `$filename`	File to read and add
+
+### `Markov::gen($length)`
+Generate a markov chain (string).
+- `$length`		Maximum length in base units (words, characters, etc)
+
+### `Markov::save($filename)`
+Save the current model to a file
+- `$filename`	File where the model should be saved
+
+### `Markov::restore($filename)`
+Restore a saved model from a file
+- `$filename`	File to restore a model from
+
+### Markov::debug_dump()
+Dump a PHP array (using print_r()) of the current model
 

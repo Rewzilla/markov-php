@@ -134,7 +134,7 @@ class Markov {
 	 * $text		: The text to be split
 	 * $delimiter	: If empty string, split on characters, otherwise on delimiter
 	 */
-	public function split($text, $delimiter) {
+	private function split($text, $delimiter) {
 
 		if($delimiter == "")
 			return str_split($text);
@@ -149,7 +149,7 @@ class Markov {
 	 * $text		: Text to join
 	 * $delimiter	: Delimiter to join on
 	 */
-	public function join($text, $delimiter) {
+	private function join($text, $delimiter) {
 
 		return implode($delimiter, $text);
 
