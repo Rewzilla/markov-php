@@ -33,10 +33,10 @@ $m->save("/tmp/model.dat");
 ```
 ## Documentation
 
-### Markov::Markov([$order = 3 [, $delimiter = " "]])
+### `Markov::Markov([$order = 3 [, $delimiter = " "]])`
 - `$order`		Markov model order (how many things we keep track of)
 - `$delimiter`	May be either "something" or "".  If empty, split on character.
 
-### Markov::add($text)
+### `Markov::add($text)`
 - `$text`		String of text to add to the current model
 
