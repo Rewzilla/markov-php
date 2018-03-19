@@ -107,9 +107,10 @@ class Markov {
 	public function save($filename) {
 
 		$state = array(
-			"start" => $this->start,
-			"chain" => $this->model,
-			"order" => $this->order,
+			"start"		=> $this->start,
+			"chain"		=> $this->model,
+			"order"		=> $this->order,
+			"delimiter"	=> $this->delimiter,
 		);
 
 		file_put_contents($filename, serialize($state));
@@ -124,9 +125,10 @@ class Markov {
 
 		$state = unserialize(file_get_contents($filename));
 
-		$this->start = $state["start"];
-		$this->model = $state["chain"];
-		$this->order = $state["order"];
+		$this->start		= $state["start"];
+		$this->model		= $state["chain"];
+		$this->order		= $state["order"];
+		$this->delimiter	= $state["delimiter"];
 
 	}
 
